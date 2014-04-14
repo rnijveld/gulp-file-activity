@@ -1,0 +1,30 @@
+{
+  "name": "gulp-file-activity",
+  "version": "0.0.1",
+  "description": "Display activity of gulp streams as they are passed around",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rnijveld/gulp-file-activity.git"
+  },
+  "author": {
+    "name": "Ruben Nijveld",
+    "email": "ruben@gewooniets.nl"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "gulp-util": "^2.2.14",
+    "gzip-size": "^0.1.1",
+    "moment": "^2.6.0",
+    "pretty-bytes": "^0.1.0",
+    "through2": "^0.4.1"
+  },
+  "keywords": [
+    "gulpplugin",
+    "file",
+    "activity",
+    "debug",
+    "gzip"
+  ]
+}
