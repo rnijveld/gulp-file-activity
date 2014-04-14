@@ -8,7 +8,7 @@ var gzipSize = require('gzip-size');
 var displaySize = function (contents, gzip) {
     var size, result;
     if (gzip) {
-        size = gzipSize(contents);
+        size = gzipSize.sync(contents);
     } else {
         size = contents.length;
     }
@@ -46,10 +46,10 @@ module.exports = function (options) {
             );
         }
 
+        now = new Date();
+        nowFormatted = moment(now).format('YYYY-MM-DD HH:mm:ss.SSS');
         if (since !== undefined && typeof since.getTime === 'function') {
-            now = new Date();
-            duration = now.getTime() - started.getTime();
-            nowFormatted = moment(now).format('YYYY-MM-DD HH:mm:ss.SSS');
+            duration = now.getTime() - since.getTime();
             gutil.log(
                 '[' + chalk.grey(nowFormatted) + '] ' + title + chalk.blue(file.relative) +
                 ' (' + displaySize(file.contents, gzip) + ') in ' +
