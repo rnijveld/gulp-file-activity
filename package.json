@@ -1,6 +1,6 @@
 {
   "name": "gulp-file-activity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Display activity of gulp streams as they are passed around",
   "license": "MIT",
   "repository": {
