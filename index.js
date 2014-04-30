@@ -61,6 +61,7 @@ module.exports = function (options) {
                 ' (' + displaySize(file.contents, gzip) + ')'
             );
         }
+        this.push(file);
         cb();
     });
 };
